@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: spring
+  name: spring-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: spring
+  template:
+    metadata:
+      labels:
+        app: spring
+    spec:
+      containers:
+      - image: rachanathota/spring-boot-backend:latest
+        name: spring
