@@ -9,7 +9,7 @@ spec:
   ports:
   - port: 8070
     protocol: TCP
-    targetPort: 8070
+    targetPort: 9090
   selector:
     app: spring
   type: LoadBalancer
